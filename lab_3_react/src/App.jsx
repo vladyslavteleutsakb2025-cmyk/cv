@@ -15,7 +15,7 @@ const cv = {
     { label: 'Місто', text: 'Львів' },
   ],
   about:
-    'Як студент першого курсу, я прагну здобути знання з програмування та використовувати нові технології. Я відповідальний та швидко навчаюсь, можу добре працювати з іншими в команді. Моя ціль — отримати досвід роботи в ІТ компанії та працювати над цікавими проєктами.',
+    'Як студент другого курсу, я прагну здобути знання з програмування та використовувати нові технології. Я відповідальний та швидко навчаюсь, можу добре працювати з іншими в команді. Моя ціль — отримати досвід роботи в ІТ компанії та працювати над цікавими проєктами.',
   education: [
     {
       school: 'НУ «Львівська Політехніка»',
@@ -43,9 +43,9 @@ const cv = {
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-slate-100 font-sans text-slate-800">
       <Header name={cv.name} age={cv.age} contacts={cv.contacts} />
-      <main>
+      <main className="mx-auto my-8 grid max-w-4xl grid-cols-1 gap-6 px-4 md:grid-cols-2">
         <About text={cv.about} />
         <Education items={cv.education} />
         <TechnicalSkills skills={cv.technicalSkills} />

@@ -1,5 +1,5 @@
 {
-  "name": "lab_2_react",
+  "name": "lab_3_react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",

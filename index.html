@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Резюме (CV): Владислав Телеуца, студент спеціальності Cybersecurity and Information Protection">
   <title>CV — Владислав Телеуца</title>
+  <!-- external: основні стилі -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- internal: невеликі правила прямо в документі -->
+  <style>
+    h2 { padding-bottom: 0.25rem; border-bottom: 2px solid #2a9fd6; }
+  </style>
 </head>
 <body>
   <header>
     <h1>Владислав Телеуца</h1>
-    <p>19 років</p>
-    <address>
+    <p style="font-style: italic;">19 років</p>
+    <address class="contacts">
       <ul>
         <li>Телефон: <a href="tel:+380687740774">+380687740774</a></li>
         <li>Email: <a href="mailto:vladyslav.teleutsa@gmail.com">vladyslav.teleutsa@gmail.com</a></li>
@@ -19,18 +25,18 @@
     </address>
   </header>
 
-  <main>
-    <section id="about">
+  <main class="layout">
+    <section id="about" class="card">
       <h2>About Me</h2>
       <p>
-        Як студент першого курсу, я прагну здобути знання з програмування та
+        Як студент другого курсу, я прагну здобути знання з програмування та
         використовувати нові технології. Я відповідальний та швидко навчаюсь,
         можу добре працювати з іншими в команді. Моя ціль — отримати досвід
         роботи в ІТ компанії та працювати над цікавими проєктами.
       </p>
     </section>
 
-    <section id="education">
+    <section id="education" class="card">
       <h2>Education</h2>
       <article>
         <h3>НУ «Львівська Політехніка»</h3>
@@ -39,7 +45,7 @@
       </article>
     </section>
 
-    <section id="technical-skills">
+    <section id="technical-skills" class="card">
       <h2>Technical Skills</h2>
       <ul>
         <li>Office &amp; Productivity: <strong>Microsoft Office, Google Workspace.</strong></li>
@@ -51,7 +57,7 @@
       </ul>
     </section>
 
-    <section id="soft-skills">
+    <section id="soft-skills" class="card">
       <h2>Soft Skills</h2>
       <ul>
         <li><strong>Емпатія</strong>, я вмію чути та надавати щиру підтримку, а не лише сухі інструкції.</li>
@@ -65,7 +71,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Владислав Телеуца. Резюме створено в рамках лабораторної роботи №2.</p>
+    <p>&copy; 2026 Владислав Телеуца. Резюме створено в рамках лабораторної роботи №3.</p>
   </footer>
 </body>
 </html>

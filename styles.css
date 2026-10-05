@@ -1,0 +1,161 @@
+/* 1. Скидання та база (селектори тегів, box-sizing) */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2d36;
+  background: #eef1f4;
+}
+h1, h2, h3 { margin: 0 0 0.5rem; color: #375c6f; }
+ul { margin: 0; padding-left: 1.25rem; }
+a { color: #1d7fb0; text-decoration: none; }
+
+/* 2. Посилання: псевдокласи та селектори атрибутів */
+a:hover { text-decoration: underline; }
+a:focus { outline: 2px solid #2a9fd6; outline-offset: 2px; }
+a[href^="mailto:"]::before { content: "✉ "; }
+a[href^="tel:"]::before { content: "☎ "; }
+
+/* 3. Шапка (Flexbox) */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  background: #375c6f;
+  color: #fff;
+}
+header h1 { margin: 0; color: #fff; font-size: 2.25rem; }
+header p { margin: 0; }
+header a { color: #fff; }
+
+.contacts { font-style: normal; }
+.contacts ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 4. Макет сторінки (CSS Grid) */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+/* Картка: margin / padding / border */
+.card {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #d5dde3;
+  border-radius: 12px;
+  background: #fff;
+}
+.card:hover { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); }
+
+/* Селектори ID: ці секції займають обидві колонки */
+#about, #soft-skills { grid-column: 1 / -1; }
+
+.card li { margin-bottom: 0.4rem; }
+.card li:last-child { margin-bottom: 0; }
+
+footer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  background: #375c6f;
+  color: #fff;
+}
+footer p { margin: 0; }
+
+/* 5. Адаптивність (медіазапит) */
+@media (max-width: 640px) {
+  .layout { grid-template-columns: 1fr; }
+  .contacts ul { flex-direction: column; }
+  header h1 { font-size: 1.75rem; }
+}
+
+/* перемикач теми, відгуки, модальне вікно */
+#theme-toggle {
+  align-self: flex-start;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+#theme-toggle:hover { background: rgba(255, 255, 255, 0.15); }
+
+#reviews { grid-column: 1 / -1; }
+.review {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #2a9fd6;
+  border-radius: 6px;
+  background: #f4f7f9;
+}
+.review h3 { margin: 0; font-size: 1rem; }
+.review p { margin: 0.25rem 0 0; }
+
+#storage-info {
+  max-width: 960px;
+  margin: 0.75rem auto 0;
+  font-size: 0.75rem;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  opacity: 0.85;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.55);
+}
+.modal[hidden] { display: none; }
+.modal-box { width: 100%; max-width: 420px; padding: 1.5rem; border-radius: 12px; background: #fff; }
+.modal-box label { display: block; margin-top: 0.75rem; font-weight: 600; }
+.modal-box input, .modal-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #b9c4cc;
+  border-radius: 6px;
+  font: inherit;
+}
+.modal-box button {
+  margin: 1rem 0.5rem 0 0;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #375c6f;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-box button:hover { background: #2a4756; }
+#modal-close { background: #8795a0; }
+
+/* Нічна тема: клас .dark на <body> */
+body.dark { background: #121a20; color: #dbe4ea; }
+body.dark .card, body.dark .modal-box { background: #1c2730; border-color: #2e3d49; }
+body.dark .card h2, body.dark .card h3, body.dark .modal-box h2 { color: #8fc3dd; }
+body.dark .review { background: #243440; }
+body.dark a { color: #7cc4ee; }
+body.dark header a { color: #fff; }
+body.dark .modal-box input, body.dark .modal-box textarea {
+  border-color: #2e3d49;
+  background: #121a20;
+  color: #dbe4ea;
+}

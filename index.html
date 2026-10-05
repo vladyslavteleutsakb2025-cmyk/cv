@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Резюме (CV): Владислав Телеуца, студент спеціальності Cybersecurity and Information Protection">
+  <title>CV — Владислав Телеуца</title>
+  <!-- external: основні стилі -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- internal: невеликі правила прямо в документі -->
+  <style>
+    h2 { padding-bottom: 0.25rem; border-bottom: 2px solid #2a9fd6; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Владислав Телеуца</h1>
+    <p style="font-style: italic;">19 років</p>
+    <address class="contacts">
+      <ul>
+        <li>Телефон: <a href="tel:+380687740774">+380687740774</a></li>
+        <li>Email: <a href="mailto:vladyslav.teleutsa@gmail.com">vladyslav.teleutsa@gmail.com</a></li>
+        <li>Місто: Львів</li>
+      </ul>
+    </address>
+    <button id="theme-toggle" type="button">🌙 Темна</button>
+  </header>
+
+  <main class="layout">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        Як студент другого курсу, я прагну здобути знання з програмування та
+        використовувати нові технології. Я відповідальний та швидко навчаюсь,
+        можу добре працювати з іншими в команді. Моя ціль — отримати досвід
+        роботи в ІТ компанії та працювати над цікавими проєктами.
+      </p>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <article>
+        <h3>НУ «Львівська Політехніка»</h3>
+        <p>Cybersecurity and Information Protection</p>
+        <p>Currently studying (<time datetime="2025">2025</time> – Present)</p>
+      </article>
+    </section>
+
+    <section id="technical-skills" class="card">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Office &amp; Productivity: <strong>Microsoft Office, Google Workspace.</strong></li>
+        <li>Languages: <strong>Python (aiogram), Java (Android).</strong></li>
+        <li>Development: <strong>Android Studio, Android SDK, Firebase.</strong></li>
+        <li>OSINT &amp; Analytics: <strong>Data gathering, research, and analysis.</strong></li>
+        <li>IDE &amp; Tools: <strong>JetBrains Suite, VS Code, Git.</strong></li>
+        <li>OS &amp; Administration: <strong>Windows, macOS, Linux (Advanced CLI &amp; virtual environments).</strong></li>
+      </ul>
+    </section>
+
+    <section id="soft-skills" class="card">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li><strong>Емпатія</strong>, я вмію чути та надавати щиру підтримку, а не лише сухі інструкції.</li>
+        <li><strong>Стресостійкість</strong>, зберігаю спокій та конструктив у конфліктних ситуаціях.</li>
+        <li><strong>Технічна комунікація</strong>, вмію пояснювати складні речі простою та зрозумілою мовою.</li>
+        <li><strong>Аналітичний підхід</strong>, швидко знаходжу причинно-наслідкові зв'язки проблеми та пропоную ефективне рішення.</li>
+        <li><strong>Командність</strong>, легко адаптуюся в колективі та готовий допомагати колегам.</li>
+        <li><strong>Adaptive Learning</strong>, миттєво опановую новий софт та внутрішні регламенти.</li>
+      </ul>
+    </section>
+
+    <section id="reviews" class="card">
+      <h2>Reviews</h2>
+      <div id="reviews-list">Завантаження...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Владислав Телеуца. Резюме створено в рамках лабораторної роботи №4.</p>
+    <pre id="storage-info"></pre>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box">
+      <h2>Зворотний зв'язок</h2>
+      <!-- Замініть YOUR_ID на endpoint зі свого Formspree -->
+      <form action="https://formspree.io/f/xyekyvrl" method="POST">
+        <label>Ім'я <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Телефон <input type="tel" name="phone"></label>
+        <label>Повідомлення <textarea name="message" rows="4" required></textarea></label>
+        <button type="submit">Надіслати</button>
+        <button type="button" id="modal-close">Закрити</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

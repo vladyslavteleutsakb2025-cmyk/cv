@@ -24,7 +24,7 @@ header {
   flex-direction: column;
   gap: 0.75rem;
   padding: 2rem 1.5rem;
-  background: #375c6f;
+  background: #2f6f4f;
   color: #fff;
 }
 header h1 { margin: 0; color: #fff; font-size: 2.25rem; }

@@ -1,6 +1,6 @@
 function Header({ name, age, contacts, theme, onToggleTheme }) {
   return (
-    <header className="bg-slate-700 dark:bg-slate-950 px-6 py-10 text-white shadow-md">
+    <header className="bg-emerald-700 dark:bg-emerald-950 px-6 py-10 text-white shadow-md">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-4xl font-bold tracking-wide sm:text-5xl">{name}</h1>
         <p className="mt-1 text-lg italic opacity-80">{age} років</p>
